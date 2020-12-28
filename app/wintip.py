@@ -4,7 +4,12 @@ import win32con
 import sys, os
 import struct
 import time
- 
+
+qty = int(sys.argv[1])
+
+for x in range(qty)    
+    WindowsBalloonTip.balloon_tip("Notificacao do PP","Notificação " + str(x) + "/" + str(qty))
+     
 class WindowsBalloonTip:
     def __init__(self, title, msg):
         message_map = {
